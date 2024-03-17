@@ -1,4 +1,7 @@
-const baseUrl = "https://dark-pear-piglet-shoe.cyclic.app/api/v1/calculate";
+const BACKEND_URL =
+  import.meta.env.VITE_BACKEND_URL || process.env.VITE_BACKEND_URL;
+
+const baseUrl = `${BACKEND_URL}/api/v1/calculate`;
 
 export const getCalculatedDetails = async (data) => {
   const response = await fetch(baseUrl, {
